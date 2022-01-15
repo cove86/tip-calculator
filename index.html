@@ -26,9 +26,37 @@
     </style>
   </head>
   <body>
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset
-
+    <div class="container">
+      <div class="calculator">
+        <div class="bill-amount">
+          <label for="bill-input">Bill</label>
+          <input id="bill-input" type="text" placeholder="0.00" required />
+        </div>
+        <div class="tip">
+          <p class="select-heading">Select Tip %</p>
+          <button class="btn tip-btn">5%</button>
+          <button class="btn tip-btn">10%</button>
+          <button class="btn tip-btn">15%</button>
+          <button class="btn tip-btn">25%</button>
+          <button class="btn tip-btn">50%</button>
+          <button class="btn tip-btn">Custom</button>
+        </div>
+        <div class="num-people">
+          <label for="num-people-input">Number of People</label>
+          <input id="num-people-input" type="text" required />
+        </div>
+      </div>
+      <div class="results">
+        <div class="tip-amount">
+          <p>Tip Amount / person</p>
+          <p>$0.00</p>
+        </div>
+        <div class="tip-total">
+          <p>Total / person Reset</p>
+          <p>$0.00</p>
+        </div>
+      </div>
+    </div>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
