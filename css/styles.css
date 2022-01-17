@@ -90,7 +90,8 @@ input {
 }
 
 .tip-btn:hover,
-.tip-btn:active {
+.tip-btn:active,
+.tip-btn-selected {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
 }
@@ -134,7 +135,7 @@ input {
   border: none;
   border-radius: 0.4rem;
   cursor: pointer;
-  height: 66%;
+  height: 50%;
 }
 
 /* .attribution {
