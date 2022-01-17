@@ -24,6 +24,7 @@
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
+    <h1>SPLI<br />TTER</h1>
     <div class="container grid">
       <div class="calculator">
         <div class="bill-amount">
@@ -55,16 +56,12 @@
         </div>
       </div>
       <div class="results">
-        <div class="tip-amount">
-          <div class="tip-label">
-            <p>Tip Amount<br />/ person</p>
-          </div>
-          <p class="tip-amount-total">$0.00</p>
+        <div class="tip-amount flex-column">
+          <p>Tip Amount<br /><span class="person">/ person</span></p>
+          <p>Total<br /><span class="person">/ person</span></p>
         </div>
-        <div class="tip-total">
-          <div class="total-label">
-            <p>Total<br />/ Person</p>
-          </div>
+        <div class="tip-total flex-column">
+          <p class="tip-amount-total">$0.00</p>
           <p class="total-amount">$0.00</p>
         </div>
         <button class="reset-btn">Reset</button>
