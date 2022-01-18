@@ -103,6 +103,7 @@ input {
 .results {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
 
   background-color: hsl(183, 100%, 15%);
   color: #fff;
@@ -131,17 +132,64 @@ input {
   font-family: inherit;
   font-size: 1.6rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   border: none;
   border-radius: 0.4rem;
   cursor: pointer;
   height: 50%;
 }
 
-/* .attribution {
-  font-size: 11px;
+.reset-btn-active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+.custom-btn {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(186, 14%, 43%);
+}
+
+.attribution {
+  margin-top: 1rem;
+  font-size: 1.1rem;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-} */
+}
+
+@media (max-width: 48em) {
+  html {
+    font-size: 50%;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .calculator {
+    padding: 0;
+  }
+
+  .tip-btns {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .num-people {
+    margin-bottom: 3rem;
+  }
+
+  .results {
+    grid-template-rows: 2fr 1fr;
+    row-gap: 3rem;
+  }
+
+  .tip-total {
+    align-items: flex-end;
+  }
+
+  .reset-btn {
+    height: 100%;
+  }
+}
