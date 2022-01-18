@@ -2,8 +2,11 @@ const billInput = document.querySelector(".bill-input");
 const tipButtonContainer = document.querySelector(".tip-btns");
 const tipButtons = document.querySelectorAll(".tip-btn");
 const numOfPeople = document.querySelector("#num-people-input");
-const tipAmount = document.querySelector(".tip-amount-total");
-const totalAmount = document.querySelector(".total-amount");
+
+let tipAmount = document.querySelector(".tip-amount-total");
+let totalAmount = document.querySelector(".total-amount");
+
+let tipPercentage;
 
 tipButtonContainer.addEventListener("click", function (e) {
   const clicked = e.target.closest(".tip-btn");
@@ -13,15 +16,19 @@ tipButtonContainer.addEventListener("click", function (e) {
   tipButtons.forEach((b) => b.classList.remove("tip-btn-selected"));
 
   clicked.classList.add("tip-btn-selected");
+  tipPercentage = clicked.value;
 });
 
 const calculate = () => {
-  console.log(billInput.value);
-  console.log(numOfPeople.value);
-  const selected = tipButtons.forEach((b) =>
-    b.classList.contains(".tip-btn-selected")
-  );
-  console.log(selected);
+  const total = billInput.value;
+  const tip = tipPercentage;
+  const people = numOfPeople.value;
+
+  const tipPerPerson = ((total / 100) * tip) / people;
+  tipAmount.textContent = `$${tipPerPerson.toFixed(2)}`;
+
+  const totalPer = total / people + tip;
+  totalAmount.textContent = `$${totalPer.toFixed(2)}`;
 };
 
 billInput.addEventListener("keydown", function (e) {
