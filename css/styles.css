@@ -62,9 +62,12 @@ input {
   margin-bottom: 3rem;
 }
 
-.bill-label {
+.bill-label,
+.tip-label,
+.num-people-label {
   display: block;
   line-height: 1.8;
+  margin-bottom: 0.5rem;
 }
 
 .tip-btns {
@@ -172,6 +175,7 @@ input {
 
 .attribution {
   margin-top: 1rem;
+  margin-bottom: 1rem;
   font-size: 1.1rem;
   text-align: center;
 }
@@ -180,7 +184,29 @@ input {
 }
 
 .error {
-  border: 2px solid red;
+  color: red;
+  animation: shake 1s;
+}
+
+@keyframes shake {
+  0% {
+    transform: skewX(-15deg);
+  }
+  5% {
+    transform: skewX(15deg);
+  }
+  10% {
+    transform: skewX(-15deg);
+  }
+  15% {
+    transform: skewX(15deg);
+  }
+  20% {
+    transform: skewX(0deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
 }
 
 @media (max-width: 48em) {
@@ -214,7 +240,8 @@ input {
     align-items: flex-end;
   }
 
-  .reset-btn {
+  .reset-btn,
+  .calculate-btn {
     height: 100%;
   }
 }
