@@ -5,6 +5,7 @@ const numOfPeople = document.querySelector("#num-people-input");
 
 const tipAmount = document.querySelector(".tip-amount-total");
 const totalAmount = document.querySelector(".total-amount");
+const calculateBtn = document.querySelector(".calculate-btn");
 const resetBtn = document.querySelector(".reset-btn");
 
 let tipPercentage;
@@ -25,11 +26,22 @@ const calculate = () => {
   const tip = tipPercentage;
   const people = numOfPeople.value;
 
+  if (!tip) {
+    alert("Please select tip");
+    return;
+  }
+
   const tipPerPerson = ((total / 100) * tip) / people;
-  tipAmount.textContent = `$${Math.floor(tipPerPerson * 100) / 100}`;
-
   const totalPer = total / people + tipPerPerson;
+  console.log(tipPerPerson);
+  console.log(totalPer);
 
+  if (isNaN(tipPerPerson) || isNan(totalPer) === NaN) {
+    alert("Please check entered information");
+    return;
+  }
+
+  tipAmount.textContent = `$${Math.floor(tipPerPerson * 100) / 100}`;
   totalAmount.textContent = `$${Math.round(totalPer * 100) / 100}`;
 
   resetBtn.classList.add("reset-btn-active");
@@ -46,12 +58,6 @@ const reset = () => {
   resetBtn.disabled = true;
 };
 
-billInput.addEventListener("keydown", function (e) {
-  if (e.key === "Enter") calculate();
-});
+calculateBtn.addEventListener("click", calculate);
 
-numOfPeople.addEventListener("keydown", function (e) {
-  if (e.key === "Enter") calculate();
-});
-
-resetBtn.addEventListener("click", () => reset());
+resetBtn.addEventListener("click", reset);
