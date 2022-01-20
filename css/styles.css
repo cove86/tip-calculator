@@ -222,9 +222,8 @@ input[type="text"]:focus {
     margin-bottom: 3rem;
   }
 
-  .results {
-    grid-template-rows: 1fr 1fr;
-    row-gap: 0rem;
+  .results-btn {
+    height: 75%;
   }
 
   .tip-total {
