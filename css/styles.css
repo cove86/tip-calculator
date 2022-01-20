@@ -223,16 +223,11 @@ input[type="text"]:focus {
   }
 
   .results {
-    grid-template-rows: 2fr 1fr;
-    row-gap: 3rem;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 0rem;
   }
 
   .tip-total {
     align-items: flex-end;
-  }
-
-  .reset-btn,
-  .calculate-btn {
-    height: 100%;
   }
 }
