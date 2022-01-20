@@ -179,7 +179,9 @@ input[type="text"]:focus {
   margin-left: 1em;
 }
 
-.custom-btn {
+.custom-btn,
+.custom-btn:hover,
+.custom-btn:active {
   background-color: hsl(189, 41%, 97%);
   color: hsl(186, 14%, 43%);
 }

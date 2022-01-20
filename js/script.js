@@ -31,6 +31,10 @@ const calculate = () => {
   const tip = tipPercentage;
   const people = numOfPeople.value;
 
+  billLabelErr.textContent = "";
+  tipLabelErr.textContent = "";
+  peopleLabelErr.textContent = "";
+
   if (isNaN(total) || total === 0 || total === "") {
     billLabelErr.textContent = "Must be number greater than 0";
     billLabelErr.classList.add("error");
@@ -51,14 +55,16 @@ const calculate = () => {
   }
 
   const tipPerPerson = ((total / 100) * tip) / people;
+  console.log(tipPerPerson);
   const totalPer = total / people + tipPerPerson;
+  console.log(totalPer);
 
   if (isNaN(tipPerPerson) || isNaN(totalPer)) {
     alert("Please check entered information");
     return;
   }
 
-  tipAmount.textContent = `$${Math.floor((tipPerPerson * 100) / 100)}`;
+  tipAmount.textContent = `$${Math.round((tipPerPerson * 100) / 100)}`;
   totalAmount.textContent = `$${Math.round((totalPer * 100) / 100)}`;
 
   resetBtn.classList.add("reset-btn-active");
@@ -69,6 +75,9 @@ const calculate = () => {
 const reset = () => {
   billInput.value = "";
   numOfPeople.value = "";
+  billLabelErr.textContent = "";
+  tipLabelErr.textContent = "";
+  peopleLabelErr.textContent = "";
   tipAmount.textContent = "$0.00";
   totalAmount.textContent = "$0.00";
   tipButtons.forEach((b) => b.classList.remove("tip-btn-selected"));
