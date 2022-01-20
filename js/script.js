@@ -1,7 +1,9 @@
 //Element Selector Variables
 
 const billInput = document.querySelector(".bill-input");
-const tipLabel = document.querySelector(".tip-label");
+const billLabelErr = document.querySelector(".bill-label-error");
+const tipLabelErr = document.querySelector(".tip-label-error");
+const peopleLabelErr = document.querySelector(".num-label-error");
 const tipButtonContainer = document.querySelector(".tip-btns");
 const tipButtons = document.querySelectorAll(".tip-btn");
 const numOfPeople = document.querySelector("#num-people-input");
@@ -29,9 +31,22 @@ const calculate = () => {
   const tip = tipPercentage;
   const people = numOfPeople.value;
 
+  if (isNaN(total) || total === 0 || total === "") {
+    billLabelErr.textContent = "Must be number greater than 0";
+    billLabelErr.classList.add("error");
+    return;
+  }
+
   if (!tip) {
     // alert("Please select tip");
-    tipLabel.classList.add("error");
+    tipLabelErr.textContent = "Please Select Tip";
+    tipLabelErr.classList.add("error");
+    return;
+  }
+
+  if (isNaN(people) || people === 0 || people === "") {
+    peopleLabelErr.textContent = "Must be number > 0";
+    peopleLabelErr.classList.add("error");
     return;
   }
 
@@ -43,10 +58,8 @@ const calculate = () => {
     return;
   }
 
-  tipAmount.textContent = `$${Math.floor((tipPerPerson * 100) / 100).toFixed(
-    2
-  )}`;
-  totalAmount.textContent = `$${Math.round(totalPer * 100) / 100}`;
+  tipAmount.textContent = `$${Math.floor((tipPerPerson * 100) / 100)}`;
+  totalAmount.textContent = `$${Math.round((totalPer * 100) / 100)}`;
 
   resetBtn.classList.add("reset-btn-active");
   resetBtn.disabled = false;

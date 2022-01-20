@@ -33,7 +33,10 @@
     <div class="container grid">
       <div class="calculator">
         <div class="bill-amount">
-          <label class="bill-label" for="bill-input">Bill</label>
+          <div class="error-label-container">
+            <label class="bill-label" for="bill-input">Bill</label>
+            <p class="bill-label-error"></p>
+          </div>
           <input
             class="bill-input"
             id="bill-input"
@@ -43,7 +46,10 @@
           />
         </div>
         <div class="tip">
-          <label class="tip-label">Select Tip %</label>
+          <div class="error-label-container">
+            <label class="tip-label">Select Tip %</label>
+            <p class="tip-label-error"></p>
+          </div>
           <div class="tip-btns">
             <button class="btn tip-btn" value="5">5%</button>
             <button class="btn tip-btn" value="10">10%</button>
@@ -54,9 +60,12 @@
           </div>
         </div>
         <div class="num-people">
-          <label class="num-people-label" for="num-people-input"
-            >Number of People</label
-          >
+          <div class="error-label-container">
+            <label class="num-people-label" for="num-people-input"
+              >Number of People</label
+            >
+            <p class="num-label-error"></p>
+          </div>
           <input id="num-people-input" type="text" placeholder="0" required />
         </div>
       </div>

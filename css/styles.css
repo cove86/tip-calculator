@@ -29,6 +29,11 @@ input {
   width: 100%;
 }
 
+input[type="text"]:focus {
+  outline: none;
+  border: 0.1rem solid hsl(172, 67%, 45%);
+}
+
 .logo {
   align-self: center;
   margin: 5rem;
@@ -58,6 +63,13 @@ input {
   padding: 0rem 2rem;
 }
 
+.error-label-container {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+
 .bill-amount {
   margin-bottom: 3rem;
 }
@@ -67,7 +79,6 @@ input {
 .num-people-label {
   display: block;
   line-height: 1.8;
-  margin-bottom: 0.5rem;
 }
 
 .tip-btns {
@@ -185,28 +196,6 @@ input {
 
 .error {
   color: red;
-  animation: shake 1s;
-}
-
-@keyframes shake {
-  0% {
-    transform: skewX(-15deg);
-  }
-  5% {
-    transform: skewX(15deg);
-  }
-  10% {
-    transform: skewX(-15deg);
-  }
-  15% {
-    transform: skewX(15deg);
-  }
-  20% {
-    transform: skewX(0deg);
-  }
-  100% {
-    transform: skewX(0deg);
-  }
 }
 
 @media (max-width: 48em) {
