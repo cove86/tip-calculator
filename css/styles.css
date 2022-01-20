@@ -221,6 +221,14 @@ input[type="text"]:focus {
   .num-people {
     margin-bottom: 3rem;
   }
+  .flex-column {
+    display: grid;
+    justify-content: flex-start;
+  }
+
+  .tip-total {
+    justify-content: center;
+  }
 
   .results-btn {
     height: 75%;
