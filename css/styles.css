@@ -227,16 +227,4 @@ input[type="text"]:focus {
   .num-people {
     margin-bottom: 3rem;
   }
-
-  .tip-total {
-    justify-content: center;
-  }
-
-  .results-btn {
-    height: 75%;
-  }
-
-  .tip-total {
-    align-items: flex-end;
-  }
 }
