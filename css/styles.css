@@ -118,7 +118,6 @@ input[type="text"]:focus {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr 1fr;
-
   background-color: hsl(183, 100%, 15%);
   color: #fff;
   border-radius: 1rem;
@@ -146,7 +145,7 @@ input[type="text"]:focus {
 }
 
 .results-btn {
-  align-self: flex-end;
+  /* align-self: center; */
   display: block;
   text-align: center;
   font-family: inherit;
