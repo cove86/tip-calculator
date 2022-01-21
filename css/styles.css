@@ -225,4 +225,9 @@ input[type="text"]:focus {
   .num-people {
     margin-bottom: 3rem;
   }
+
+  .calculate-btn,
+  .reset-btn {
+    grid-row: 2;
+  }
 }
