@@ -138,7 +138,7 @@ input[type="text"]:focus {
 
 .results-btn {
   align-self: flex-end;
-  grid-column: 1 / -1;
+  /* grid-column: 1 / -1; */
   display: block;
   text-align: center;
   font-family: inherit;
@@ -169,13 +169,13 @@ input[type="text"]:focus {
 
 .calculate-btn {
   align-self: flex-end;
-  grid-column: 1;
+  /* grid-column: 1; */
   margin-right: 1em;
 }
 
 .reset-btn {
   align-self: flex-end;
-  grid-column: 2;
+  /* grid-column: 2; */
   margin-left: 1em;
 }
 
