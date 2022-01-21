@@ -36,7 +36,7 @@ const calculate = () => {
   peopleLabelErr.textContent = "";
 
   if (isNaN(total) || total === 0 || total === "") {
-    billLabelErr.textContent = "Must be number greater than 0";
+    billLabelErr.textContent = "Must be number > 0";
     billLabelErr.classList.add("error");
     return;
   }

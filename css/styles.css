@@ -125,8 +125,13 @@ input[type="text"]:focus {
   padding: 2rem 2rem;
 }
 
+.tip-amount-text {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
 .tip-total {
-  align-items: center;
+  text-align: right;
   font-size: 3.2rem;
   font-weight: 700;
   color: hsl(172, 67%, 45%);
@@ -136,9 +141,12 @@ input[type="text"]:focus {
   color: hsl(184, 14%, 56%);
 }
 
+.tip-amount-total {
+  margin-bottom: 3rem;
+}
+
 .results-btn {
   align-self: flex-end;
-  /* grid-column: 1 / -1; */
   display: block;
   text-align: center;
   font-family: inherit;
@@ -169,13 +177,11 @@ input[type="text"]:focus {
 
 .calculate-btn {
   align-self: flex-end;
-  /* grid-column: 1; */
   margin-right: 1em;
 }
 
 .reset-btn {
   align-self: flex-end;
-  /* grid-column: 2; */
   margin-left: 1em;
 }
 
@@ -220,10 +226,6 @@ input[type="text"]:focus {
 
   .num-people {
     margin-bottom: 3rem;
-  }
-  .flex-column {
-    display: grid;
-    justify-content: flex-start;
   }
 
   .tip-total {
