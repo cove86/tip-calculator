@@ -9,8 +9,6 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   background-color: hsl(185, 41%, 84%);
   font-family: "Space Mono", monospace;
   font-size: 1.2rem;
@@ -35,11 +33,13 @@ input[type="text"]:focus {
 }
 
 .logo {
-  align-self: center;
-  margin: 5rem;
+  display: block;
+
+  margin: 5rem auto;
 }
 
 .container {
+  margin: 0 auto;
   max-width: 77rem;
   align-self: center;
   background-color: #fff;
