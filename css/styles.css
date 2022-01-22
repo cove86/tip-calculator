@@ -116,12 +116,12 @@ input[type="text"]:focus {
 
 .results {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   background-color: hsl(183, 100%, 15%);
   color: #fff;
   border-radius: 1rem;
-  padding: 2rem 2rem;
+  padding: 3rem 2rem;
 }
 
 .tip-amount-text {
@@ -145,7 +145,7 @@ input[type="text"]:focus {
 }
 
 .results-btn {
-  /* align-self: center; */
+  align-self: flex-end;
   display: block;
   text-align: center;
   font-family: inherit;
@@ -155,7 +155,7 @@ input[type="text"]:focus {
   border: none;
   border-radius: 0.4rem;
   cursor: pointer;
-  height: 50%;
+  height: 33%;
 }
 
 .calculate-btn {
