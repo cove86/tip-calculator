@@ -41,7 +41,6 @@ input[type="text"]:focus {
 .container {
   margin: 0 auto;
   max-width: 77rem;
-  align-self: center;
   background-color: #fff;
   border-radius: 1rem;
   padding: 2rem;
@@ -126,7 +125,7 @@ input[type="text"]:focus {
 
 .tip-amount-text {
   margin-top: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .tip-total {
@@ -142,7 +141,7 @@ input[type="text"]:focus {
 
 .tip-amount-total {
   align-self: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .results-btn {
@@ -209,8 +208,11 @@ input[type="text"]:focus {
     font-size: 50%;
   }
   .container {
-    display: flex;
-    flex-direction: column;
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    justify-items: center;
   }
 
   .calculator {
@@ -228,6 +230,12 @@ input[type="text"]:focus {
 
   .results {
     padding: 2rem 2rem;
-    grid-template-rows: 2fr 1fr;
+    width: 100%;
+    /* grid-template-rows: 100px 50px; */
+    /* grid-template-columns: 100px 100px; */
+  }
+
+  .results-btn {
+    height: 100%;
   }
 }
