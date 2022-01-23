@@ -64,8 +64,8 @@ const calculate = () => {
     return;
   }
 
-  tipAmount.textContent = `$${Math.round((tipPerPerson * 100) / 100)}`;
-  totalAmount.textContent = `$${Math.round((totalPer * 100) / 100)}`;
+  tipAmount.textContent = `$${((tipPerPerson * 100) / 100).toFixed(2)}`;
+  totalAmount.textContent = `$${((totalPer * 100) / 100).toFixed(2)}`;
 
   resetBtn.classList.add("reset-btn-active");
   resetBtn.disabled = false;
