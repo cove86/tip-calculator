@@ -15,9 +15,10 @@ let tipPercentage;
 
 const customTip = document.querySelector(".custom-btn");
 
-customTip.addEventListener("click", function () {
+// Change custom button to input field
+customTip.addEventListener("click", function (e) {
   customTip.outerHTML = `
-  <input placeholder="0" />
+  <input type="text" id="custom" placeholder="0" autofocus/>
   `;
 });
 
@@ -36,7 +37,9 @@ tipButtonContainer.addEventListener("click", function (e) {
 // Function to calculate the amounts
 const calculate = () => {
   const total = billInput.value;
-  const tip = tipPercentage;
+  const tip = tipPercentage
+    ? tipPercentage
+    : document.getElementById("custom").value;
   const people = numOfPeople.value;
 
   billLabelErr.textContent = "";
@@ -81,16 +84,7 @@ const calculate = () => {
 
 // Function to change all values back to original state
 const reset = () => {
-  billInput.value = "";
-  numOfPeople.value = "";
-  billLabelErr.textContent = "";
-  tipLabelErr.textContent = "";
-  peopleLabelErr.textContent = "";
-  tipAmount.textContent = "$0.00";
-  totalAmount.textContent = "$0.00";
-  tipButtons.forEach((b) => b.classList.remove("tip-btn-selected"));
-  resetBtn.classList.remove("reset-btn-active");
-  resetBtn.disabled = true;
+  location.reload();
 };
 
 // Add calculate & reset functions to buttons
