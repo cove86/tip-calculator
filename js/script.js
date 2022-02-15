@@ -13,6 +13,14 @@ const calculateBtn = document.querySelector(".calculate-btn");
 const resetBtn = document.querySelector(".reset-btn");
 let tipPercentage;
 
+const customTip = document.querySelector(".custom-btn");
+
+customTip.addEventListener("click", function () {
+  customTip.outerHTML = `
+  <input placeholder="0" />
+  `;
+});
+
 // Add class to tip button, button value to tipPercentage variable
 tipButtonContainer.addEventListener("click", function (e) {
   const clicked = e.target.closest(".tip-btn");
