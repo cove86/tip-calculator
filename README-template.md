@@ -26,7 +26,7 @@ Users should be able to:
 
 ##Desktop
 
-![](/images/tip-calc.jpg) | width = 50%
+![](/images/tip-calc.jpg)
 
 ##Mobile
 ![](/images/tip-calc-mobile.png)
