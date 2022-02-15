@@ -26,7 +26,7 @@ Users should be able to:
 
 ##Desktop
 
-![](/images/tip-calc.jpg)
+![](/images/tip-calc.JPG)
 
 ##Mobile
 ![](/images/tip-calc-mobile.png)
