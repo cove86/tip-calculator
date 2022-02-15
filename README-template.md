@@ -26,11 +26,11 @@ Users should be able to:
 
 ##Desktop
  
-<img src="/images/tip-calc.JPG" width="100" height="100">
+<img src="/images/tip-calc.JPG" width="400" height="400">
 
 ##Mobile
 
-<img src="/images/tip-calc-mobile.png" width="100" height="100">
+<img src="/images/tip-calc-mobile.png" width="200" height="400">
 
 ### Links
 
