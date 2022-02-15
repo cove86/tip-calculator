@@ -25,11 +25,12 @@ Users should be able to:
 ### Screenshot
 
 ##Desktop
-
-![](/images/tip-calc.JPG)
+ 
+<img src="/images/tip-calc.JPG" width="100" height="100">
 
 ##Mobile
-![](/images/tip-calc-mobile.png)
+
+<img src="/images/tip-calc-mobile.png" width="100" height="100">
 
 ### Links
 
