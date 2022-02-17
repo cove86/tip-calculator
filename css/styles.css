@@ -71,6 +71,19 @@ input[type="text"]:focus {
 
 .bill-amount {
   margin-bottom: 3rem;
+  position: relative;
+}
+
+i {
+  position: absolute;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 1rem;
+  color: #ddd;
+}
+
+.num-people {
+  position: relative;
 }
 
 .bill-label,
